@@ -1,316 +1,1178 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <link rel="icon" href="/images/img2.jpeg">
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-thead, tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-svg { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  #write > p:nth-child(1) { margin-top: 0px; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
-  figure { overflow-x: visible; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.reversefootnote { font-family: ui-monospace, sans-serif; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background: inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) {
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) {
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
-mjx-container { break-inside: avoid; }
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css' />
+    <style type='text/css'>
+        html {
+            overflow-x: initial !important;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --select-text-bg-color: #B5D6FC;
+            --select-text-font-color: auto;
+            --monospace: "Lucida Console", Consolas, "Courier", monospace;
+            --title-bar-height: 20px;
+        }
+
+        .mac-os-11 {
+            --title-bar-height: 28px;
+        }
+
+        html {
+            font-size: 14px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            white-space: pre-wrap;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: auto;
+            inset: 0px;
+            font-size: 1rem;
+            line-height: 1.42857;
+            overflow-x: hidden;
+            background: inherit;
+        }
+
+        iframe {
+            margin: auto;
+        }
+
+        a.url {
+            word-break: break-all;
+        }
+
+        a:active,
+        a:hover {
+            outline: 0px;
+        }
+
+        .in-text-selection,
+        ::selection {
+            text-shadow: none;
+            background: var(--select-text-bg-color);
+            color: var(--select-text-font-color);
+        }
+
+        #write {
+            margin: 0px auto;
+            height: auto;
+            width: inherit;
+            word-break: normal;
+            overflow-wrap: break-word;
+            position: relative;
+            white-space: normal;
+            overflow-x: visible;
+            padding-top: 36px;
+        }
+
+        #write.first-line-indent p {
+            text-indent: 2em;
+        }
+
+        #write.first-line-indent li p,
+        #write.first-line-indent p * {
+            text-indent: 0px;
+        }
+
+        #write.first-line-indent li {
+            margin-left: 2em;
+        }
+
+        .for-image #write {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        body.typora-export {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .typora-export .footnote-line,
+        .typora-export li,
+        .typora-export p {
+            white-space: pre-wrap;
+        }
+
+        .typora-export .task-list-item input {
+            pointer-events: none;
+        }
+
+        @media screen and (max-width: 500px) {
+            body.typora-export {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            #write {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        #write li>figure:last-child {
+            margin-bottom: 0.5rem;
+        }
+
+        #write ol,
+        #write ul {
+            position: relative;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+            image-orientation: from-image;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            color: inherit;
+            font: inherit;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            line-height: normal;
+            padding: 0px;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p,
+        #write pre {
+            width: inherit;
+        }
+
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p {
+            position: relative;
+        }
+
+        p {
+            line-height: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            break-after: avoid-page;
+            break-inside: avoid;
+            orphans: 4;
+        }
+
+        p {
+            orphans: 4;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
+
+        .md-math-block,
+        .md-rawblock,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .md-blockmeta {
+            color: rgb(204, 204, 204);
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        sup.md-footnote {
+            padding: 2px 4px;
+            background-color: rgba(238, 238, 238, 0.7);
+            color: rgb(85, 85, 85);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        sup.md-footnote a,
+        sup.md-footnote a:hover {
+            color: inherit;
+            text-transform: inherit;
+            text-decoration: inherit;
+        }
+
+        #write input[type="checkbox"] {
+            cursor: pointer;
+            width: inherit;
+            height: inherit;
+        }
+
+        figure {
+            overflow-x: auto;
+            margin: 1.2em 0px;
+            max-width: calc(100% + 16px);
+            padding: 0px;
+        }
+
+        figure>table {
+            margin: 0px;
+        }
+
+        thead,
+        tr {
+            break-inside: avoid;
+            break-after: auto;
+        }
+
+        thead {
+            display: table-header-group;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+            width: 100%;
+            overflow: auto;
+            break-inside: auto;
+            text-align: left;
+        }
+
+        table.md-table td {
+            min-width: 32px;
+        }
+
+        .CodeMirror-gutters {
+            border-right: 0px;
+            background-color: inherit;
+        }
+
+        .CodeMirror-linenumber {
+            user-select: none;
+        }
+
+        .CodeMirror {
+            text-align: left;
+        }
+
+        .CodeMirror-placeholder {
+            opacity: 0.3;
+        }
+
+        .CodeMirror pre {
+            padding: 0px 4px;
+        }
+
+        .CodeMirror-lines {
+            padding: 0px;
+        }
+
+        div.hr:focus {
+            cursor: none;
+        }
+
+        #write pre {
+            white-space: pre-wrap;
+        }
+
+        #write.fences-no-line-wrapping pre {
+            white-space: pre;
+        }
+
+        #write pre.ty-contain-cm {
+            white-space: normal;
+        }
+
+        .CodeMirror-gutters {
+            margin-right: 4px;
+        }
+
+        .md-fences {
+            font-size: 0.9rem;
+            display: block;
+            break-inside: avoid;
+            text-align: left;
+            overflow: visible;
+            white-space: pre;
+            background: inherit;
+            position: relative !important;
+        }
+
+        .md-fences-adv-panel {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 8px;
+            overflow-x: auto;
+        }
+
+        #write .md-fences.mock-cm {
+            white-space: pre-wrap;
+        }
+
+        .md-fences.md-fences-with-lineno {
+            padding-left: 0px;
+        }
+
+        #write.fences-no-line-wrapping .md-fences.mock-cm {
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        .md-fences.mock-cm.md-fences-with-lineno {
+            padding-left: 8px;
+        }
+
+        .CodeMirror-line,
+        twitterwidget {
+            break-inside: avoid;
+        }
+
+        svg {
+            break-inside: avoid;
+        }
+
+        .footnotes {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .footnotes+.footnotes {
+            margin-top: 0px;
+        }
+
+        .md-reset {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            outline: 0px;
+            vertical-align: top;
+            background: 0px 0px;
+            text-decoration: none;
+            text-shadow: none;
+            float: none;
+            position: static;
+            width: auto;
+            height: auto;
+            white-space: nowrap;
+            cursor: inherit;
+            -webkit-tap-highlight-color: transparent;
+            line-height: normal;
+            font-weight: 400;
+            text-align: left;
+            box-sizing: content-box;
+            direction: ltr;
+        }
+
+        li div {
+            padding-top: 0px;
+        }
+
+        blockquote {
+            margin: 1rem 0px;
+        }
+
+        li .mathjax-block,
+        li p {
+            margin: 0.5rem 0px;
+        }
+
+        li blockquote {
+            margin: 1rem 0px;
+        }
+
+        li {
+            margin: 0px;
+            position: relative;
+        }
+
+        blockquote> :last-child {
+            margin-bottom: 0px;
+        }
+
+        blockquote> :first-child,
+        li> :first-child {
+            margin-top: 0px;
+        }
+
+        .footnotes-area {
+            color: rgb(136, 136, 136);
+            margin-top: 0.714rem;
+            padding-bottom: 0.143rem;
+            white-space: normal;
+        }
+
+        #write .footnote-line {
+            white-space: pre-wrap;
+        }
+
+        @media print {
+
+            body,
+            html {
+                border: 1px solid transparent;
+                height: 99%;
+                break-after: avoid;
+                break-before: avoid;
+                font-variant-ligatures: no-common-ligatures;
+            }
+
+            #write {
+                margin-top: 0px;
+                border-color: transparent !important;
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+            }
+
+            .typora-export * {
+                -webkit-print-color-adjust: exact;
+            }
+
+            .typora-export #write {
+                break-after: avoid;
+            }
+
+            .typora-export #write::after {
+                height: 0px;
+            }
+
+            .is-mac table {
+                break-inside: avoid;
+            }
+
+            #write>p:nth-child(1) {
+                margin-top: 0px;
+            }
+
+            .typora-export-show-outline .typora-export-sidebar {
+                display: none;
+            }
+
+            figure {
+                overflow-x: visible;
+            }
+        }
+
+        .footnote-line {
+            margin-top: 0.714em;
+            font-size: 0.7em;
+        }
+
+        a img,
+        img a {
+            cursor: pointer;
+        }
+
+        pre.md-meta-block {
+            font-size: 0.8rem;
+            min-height: 0.8rem;
+            white-space: pre-wrap;
+            background: rgb(204, 204, 204);
+            display: block;
+            overflow-x: hidden;
+        }
+
+        p>.md-image:only-child:not(.md-img-error) img,
+        p>img:only-child {
+            display: block;
+            margin: auto;
+        }
+
+        #write.first-line-indent p>.md-image:only-child:not(.md-img-error) img {
+            left: -2em;
+            position: relative;
+        }
+
+        p>.md-image:only-child {
+            display: inline-block;
+            width: 100%;
+        }
+
+        #write .MathJax_Display {
+            margin: 0.8em 0px 0px;
+        }
+
+        .md-math-block {
+            width: 100%;
+        }
+
+        .md-math-block:not(:empty)::after {
+            display: none;
+        }
+
+        .MathJax_ref {
+            fill: currentcolor;
+        }
+
+        [contenteditable="true"]:active,
+        [contenteditable="true"]:focus,
+        [contenteditable="false"]:active,
+        [contenteditable="false"]:focus {
+            outline: 0px;
+            box-shadow: none;
+        }
+
+        .md-task-list-item {
+            position: relative;
+            list-style-type: none;
+        }
+
+        .task-list-item.md-task-list-item {
+            padding-left: 0px;
+        }
+
+        .md-task-list-item>input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin-left: -1.2em;
+            margin-top: calc(1em - 10px);
+            border: none;
+        }
+
+        .math {
+            font-size: 1rem;
+        }
+
+        .md-toc {
+            min-height: 3.58rem;
+            position: relative;
+            font-size: 0.9rem;
+            border-radius: 10px;
+        }
+
+        .md-toc-content {
+            position: relative;
+            margin-left: 0px;
+        }
+
+        .md-toc-content::after,
+        .md-toc::after {
+            display: none;
+        }
+
+        .md-toc-item {
+            display: block;
+            color: rgb(65, 131, 196);
+        }
+
+        .md-toc-item a {
+            text-decoration: none;
+        }
+
+        .md-toc-inner:hover {
+            text-decoration: underline;
+        }
+
+        .md-toc-inner {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .md-toc-h1 .md-toc-inner {
+            margin-left: 0px;
+            font-weight: 700;
+        }
+
+        .md-toc-h2 .md-toc-inner {
+            margin-left: 2em;
+        }
+
+        .md-toc-h3 .md-toc-inner {
+            margin-left: 4em;
+        }
+
+        .md-toc-h4 .md-toc-inner {
+            margin-left: 6em;
+        }
+
+        .md-toc-h5 .md-toc-inner {
+            margin-left: 8em;
+        }
+
+        .md-toc-h6 .md-toc-inner {
+            margin-left: 10em;
+        }
+
+        @media screen and (max-width: 48em) {
+            .md-toc-h3 .md-toc-inner {
+                margin-left: 3.5em;
+            }
+
+            .md-toc-h4 .md-toc-inner {
+                margin-left: 5em;
+            }
+
+            .md-toc-h5 .md-toc-inner {
+                margin-left: 6.5em;
+            }
+
+            .md-toc-h6 .md-toc-inner {
+                margin-left: 8em;
+            }
+        }
+
+        a.md-toc-inner {
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+        .footnote-line a:not(.reversefootnote) {
+            color: inherit;
+        }
+
+        .reversefootnote {
+            font-family: ui-monospace, sans-serif;
+        }
+
+        .md-attr {
+            display: none;
+        }
+
+        .md-fn-count::after {
+            content: ".";
+        }
+
+        code,
+        pre,
+        samp,
+        tt {
+            font-family: var(--monospace);
+        }
+
+        kbd {
+            margin: 0px 0.1em;
+            padding: 0.1em 0.6em;
+            font-size: 0.8em;
+            color: rgb(36, 39, 41);
+            background: rgb(255, 255, 255);
+            border: 1px solid rgb(173, 179, 185);
+            border-radius: 3px;
+            box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .md-comment {
+            color: rgb(162, 127, 3);
+            opacity: 0.6;
+            font-family: var(--monospace);
+        }
+
+        code {
+            text-align: left;
+            vertical-align: initial;
+        }
+
+        a.md-print-anchor {
+            white-space: pre !important;
+            border-width: initial !important;
+            border-style: none !important;
+            border-color: initial !important;
+            display: inline-block !important;
+            position: absolute !important;
+            width: 1px !important;
+            right: 0px !important;
+            outline: 0px !important;
+            background: 0px 0px !important;
+            text-decoration: initial !important;
+            text-shadow: initial !important;
+        }
+
+        .os-windows.monocolor-emoji .md-emoji {
+            font-family: "Segoe UI Symbol", sans-serif;
+        }
+
+        .md-diagram-panel>svg {
+            max-width: 100%;
+        }
+
+        [lang="flow"] svg,
+        [lang="mermaid"] svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        [lang="mermaid"] .node text {
+            font-size: 1rem;
+        }
+
+        table tr th {
+            border-bottom: 0px;
+        }
+
+        video {
+            max-width: 100%;
+            display: block;
+            margin: 0px auto;
+        }
+
+        iframe {
+            max-width: 100%;
+            width: 100%;
+            border: none;
+        }
+
+        .highlight td,
+        .highlight tr {
+            border: 0px;
+        }
+
+        mark {
+            background: rgb(255, 255, 0);
+            color: rgb(0, 0, 0);
+        }
+
+        .md-html-inline .md-plain,
+        .md-html-inline strong,
+        mark .md-inline-math,
+        mark strong {
+            color: inherit;
+        }
+
+        .md-expand mark .md-meta {
+            opacity: 0.3 !important;
+        }
+
+        mark .md-meta {
+            color: rgb(0, 0, 0);
+        }
+
+        @media print {
+
+            .typora-export h1,
+            .typora-export h2,
+            .typora-export h3,
+            .typora-export h4,
+            .typora-export h5,
+            .typora-export h6 {
+                break-inside: avoid;
+            }
+        }
+
+        .md-diagram-panel .messageText {
+            stroke: none !important;
+        }
+
+        .md-diagram-panel .start-state {
+            fill: var(--node-fill);
+        }
+
+        .md-diagram-panel .edgeLabel rect {
+            opacity: 1 !important;
+        }
+
+        .md-fences.md-fences-math {
+            font-size: 1em;
+        }
+
+        .md-fences-advanced:not(.md-focus) {
+            padding: 0px;
+            white-space: nowrap;
+            border: 0px;
+        }
+
+        .md-fences-advanced:not(.md-focus) {
+            background: inherit;
+        }
+
+        .typora-export-show-outline .typora-export-content {
+            max-width: 1440px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .typora-export-sidebar {
+            width: 300px;
+            font-size: 0.8rem;
+            margin-top: 80px;
+            margin-right: 18px;
+        }
+
+        .typora-export-show-outline #write {
+            --webkit-flex: 2;
+            flex: 2 1 0%;
+        }
+
+        .typora-export-sidebar .outline-content {
+            position: fixed;
+            top: 0px;
+            max-height: 100%;
+            overflow: hidden auto;
+            padding-bottom: 30px;
+            padding-top: 60px;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 1024px) {
+
+            .typora-export-sidebar,
+            .typora-export-sidebar .outline-content {
+                width: 240px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .typora-export-sidebar {
+                display: none;
+            }
+        }
+
+        .outline-content li,
+        .outline-content ul {
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            list-style: none;
+            overflow-wrap: anywhere;
+        }
+
+        .outline-content ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .outline-content strong {
+            font-weight: 400;
+        }
+
+        .outline-expander {
+            width: 1rem;
+            height: 1.42857rem;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            cursor: pointer;
+            padding-left: 4px;
+        }
+
+        .outline-expander::before {
+            content: "";
+            position: relative;
+            font-family: Ionicons;
+            display: inline-block;
+            font-size: 8px;
+            vertical-align: middle;
+        }
+
+        .outline-item {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            cursor: pointer;
+        }
+
+        .outline-expander:hover::before {
+            content: "";
+        }
+
+        .outline-h1>.outline-item {
+            padding-left: 0px;
+        }
+
+        .outline-h2>.outline-item {
+            padding-left: 1em;
+        }
+
+        .outline-h3>.outline-item {
+            padding-left: 2em;
+        }
+
+        .outline-h4>.outline-item {
+            padding-left: 3em;
+        }
+
+        .outline-h5>.outline-item {
+            padding-left: 4em;
+        }
+
+        .outline-h6>.outline-item {
+            padding-left: 5em;
+        }
+
+        .outline-label {
+            cursor: pointer;
+            display: table-cell;
+            vertical-align: middle;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .outline-label:hover {
+            text-decoration: underline;
+        }
+
+        .outline-item:hover {
+            border-color: rgb(245, 245, 245);
+            background-color: var(--item-hover-bg-color);
+        }
+
+        .outline-item:hover {
+            margin-left: -28px;
+            margin-right: -28px;
+            border-left: 28px solid transparent;
+            border-right: 28px solid transparent;
+        }
+
+        .outline-item-single .outline-expander::before,
+        .outline-item-single .outline-expander:hover::before {
+            display: none;
+        }
+
+        .outline-item-open>.outline-item>.outline-expander::before {
+            content: "";
+        }
+
+        .outline-children {
+            display: none;
+        }
+
+        .info-panel-tab-wrapper {
+            display: none;
+        }
+
+        .outline-item-open>.outline-children {
+            display: block;
+        }
+
+        .typora-export .outline-item {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+
+        .typora-export .outline-item:hover {
+            margin-right: -8px;
+            border-right: 8px solid transparent;
+        }
+
+        .typora-export .outline-expander::before {
+            content: "+";
+            font-family: inherit;
+            top: -1px;
+        }
+
+        .typora-export .outline-expander:hover::before,
+        .typora-export .outline-item-open>.outline-item>.outline-expander::before {
+            content: "−";
+        }
+
+        .typora-export-collapse-outline .outline-children {
+            display: none;
+        }
+
+        .typora-export-collapse-outline .outline-item-open>.outline-children,
+        .typora-export-no-collapse-outline .outline-children {
+            display: block;
+        }
+
+        .typora-export-no-collapse-outline .outline-expander::before {
+            content: "" !important;
+        }
+
+        .typora-export-show-outline .outline-item-active>.outline-item .outline-label {
+            font-weight: 700;
+        }
+
+        .md-inline-math-container mjx-container {
+            zoom: 0.95;
+        }
+
+        mjx-container {
+            break-inside: avoid;
+        }
 
 
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
+        :root {
+            --side-bar-bg-color: #fafafa;
+            --control-text-color: #777;
+        }
 
-@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+        @include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
+        /* open-sans-regular - latin-ext_latin */
+        /* open-sans-italic - latin-ext_latin */
+        /* open-sans-700 - latin-ext_latin */
+        /* open-sans-700italic - latin-ext_latin */
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
 
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
+        body {
+            font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+            color: rgb(51, 51, 51);
+            line-height: 1.6;
+        }
 
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
+        #write {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 30px;
+            padding-bottom: 100px;
+        }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
+        @media only screen and (min-width: 1400px) {
+            #write {
+                max-width: 1024px;
+            }
+        }
 
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
+        @media only screen and (min-width: 1800px) {
+            #write {
+                max-width: 1200px;
+            }
+        }
 
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
+        #write>ul:first-child,
+        #write>ol:first-child {
+            margin-top: 30px;
+        }
 
-a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
+        a {
+            color: #4183C4;
+        }
 
-/*@media print {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            position: relative;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            line-height: 1.4;
+            cursor: text;
+        }
+
+        h1:hover a.anchor,
+        h2:hover a.anchor,
+        h3:hover a.anchor,
+        h4:hover a.anchor,
+        h5:hover a.anchor,
+        h6:hover a.anchor {
+            text-decoration: none;
+        }
+
+        h1 tt,
+        h1 code {
+            font-size: inherit;
+        }
+
+        h2 tt,
+        h2 code {
+            font-size: inherit;
+        }
+
+        h3 tt,
+        h3 code {
+            font-size: inherit;
+        }
+
+        h4 tt,
+        h4 code {
+            font-size: inherit;
+        }
+
+        h5 tt,
+        h5 code {
+            font-size: inherit;
+        }
+
+        h6 tt,
+        h6 code {
+            font-size: inherit;
+        }
+
+        h1 {
+            font-size: 2.25em;
+            line-height: 1.2;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2 {
+            font-size: 1.75em;
+            line-height: 1.225;
+            border-bottom: 1px solid #eee;
+        }
+
+        /*@media print {
     .typora-export h1,
     .typora-export h2 {
         border-bottom: none;
@@ -327,273 +1189,1729 @@ h2 {
     }
 }*/
 
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
+        h3 {
+            font-size: 1.5em;
+            line-height: 1.43;
+        }
 
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
+        h4 {
+            font-size: 1.25em;
+        }
 
-.CodeMirror-lines {
-    padding-left: 4px;
-}
+        h5 {
+            font-size: 1em;
+        }
 
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
+        h6 {
+            font-size: 1em;
+            color: #777;
+        }
 
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
+        p,
+        blockquote,
+        ul,
+        ol,
+        dl,
+        table {
+            margin: 0.8em 0;
+        }
 
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
+        li>ol,
+        li>ul {
+            margin: 0 0;
+        }
 
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
+        hr {
+            height: 2px;
+            padding: 0;
+            margin: 16px 0;
+            background-color: #e7e7e7;
+            border: 0 none;
+            overflow: hidden;
+            box-sizing: content-box;
+        }
+
+        li p.first {
+            display: inline-block;
+        }
+
+        ul,
+        ol {
+            padding-left: 30px;
+        }
+
+        ul:first-child,
+        ol:first-child {
+            margin-top: 0;
+        }
+
+        ul:last-child,
+        ol:last-child {
+            margin-bottom: 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding: 0 15px;
+            color: #777777;
+        }
+
+        blockquote blockquote {
+            padding-right: 0;
+        }
+
+        table {
+            padding: 0;
+            word-break: initial;
+        }
+
+        table tr {
+            border: 1px solid #dfe2e5;
+            margin: 0;
+            padding: 0;
+        }
+
+        table tr:nth-child(2n),
+        thead {
+            background-color: #f8f8f8;
+        }
+
+        table th {
+            font-weight: bold;
+            border: 1px solid #dfe2e5;
+            border-bottom: 0;
+            margin: 0;
+            padding: 6px 13px;
+        }
+
+        table td {
+            border: 1px solid #dfe2e5;
+            margin: 0;
+            padding: 6px 13px;
+        }
+
+        table th:first-child,
+        table td:first-child {
+            margin-top: 0;
+        }
+
+        table th:last-child,
+        table td:last-child {
+            margin-bottom: 0;
+        }
+
+        .CodeMirror-lines {
+            padding-left: 4px;
+        }
+
+        .code-tooltip {
+            box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+            border-top: 1px solid #eef2f2;
+        }
+
+        .md-fences,
+        code,
+        tt {
+            border: 1px solid #e7eaed;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+            padding: 0;
+            padding: 2px 4px 0px 4px;
+            font-size: 0.9em;
+        }
+
+        code {
+            background-color: #f3f4f4;
+            padding: 0 2px 0 2px;
+        }
+
+        .md-fences {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            padding-top: 8px;
+            padding-bottom: 6px;
+        }
 
 
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
+        .md-task-list-item>input {
+            margin-left: -1.3em;
+        }
 
-@media print {
-    html {
-        font-size: 13px;
-    }
-    pre {
-        page-break-inside: avoid;
-        word-wrap: break-word;
-    }
-}
+        @media print {
+            html {
+                font-size: 13px;
+            }
 
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
+            pre {
+                page-break-inside: avoid;
+                word-wrap: break-word;
+            }
+        }
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
+        .md-fences {
+            background-color: #f8f8f8;
+        }
 
-.md-mathjax-midline {
-    background: #fafafa;
-}
+        #write pre.md-meta-block {
+            padding: 1rem;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f7f7f7;
+            border: 0;
+            border-radius: 3px;
+            color: #777777;
+            margin-top: 0 !important;
+        }
 
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
+        .mathjax-block>.code-tooltip {
+            bottom: .375rem;
+        }
 
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
+        .md-mathjax-midline {
+            background: #fafafa;
+        }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
+        #write>h3.md-focus:before {
+            left: -1.5625rem;
+            top: .375rem;
+        }
 
-.sidebar-tabs {
-    border-bottom: none;
-}
+        #write>h4.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
 
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
+        #write>h5.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
+        #write>h6.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
 
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
+        .md-image>.md-meta {
+            /*border: 1px solid #ddd;*/
+            border-radius: 3px;
+            padding: 2px 0px 0px 4px;
+            font-size: 0.9em;
+            color: inherit;
+        }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
+        .md-tag {
+            color: #a7a7a7;
+            opacity: 1;
+        }
 
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
+        .md-toc {
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
 
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
+        .sidebar-tabs {
+            border-bottom: none;
+        }
 
-.md-lang {
-    color: #b4654d;
-}
+        #typora-quick-open {
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+        }
 
-/*.html-for-mac {
+        #typora-quick-open-item {
+            background-color: #FAFAFA;
+            border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        /** focus mode */
+        .on-focus-mode blockquote {
+            border-left-color: rgba(85, 85, 85, 0.12);
+        }
+
+        header,
+        .context-menu,
+        .megamenu-content,
+        footer {
+            font-family: "Segoe UI", "Arial", sans-serif;
+        }
+
+        .file-node-content:hover .file-node-icon,
+        .file-node-content:hover .file-node-open-state {
+            visibility: visible;
+        }
+
+        .mac-seamless-mode #typora-sidebar {
+            background-color: #fafafa;
+            background-color: var(--side-bar-bg-color);
+        }
+
+        .md-lang {
+            color: #b4654d;
+        }
+
+        /*.html-for-mac {
     --item-hover-bg-color: #E6F0FE;
 }*/
 
-#md-notification .btn {
-    border: 0;
-}
+        #md-notification .btn {
+            border: 0;
+        }
 
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
+        .dropdown-menu .divider {
+            border-color: #e5e5e5;
+            opacity: 0.4;
+        }
 
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
+        .ty-preferences .window-content {
+            background-color: #fafafa;
+        }
 
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
+        .ty-preferences .nav-group-item.active {
+            color: white;
+            background: #999;
+        }
 
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
-}
-
-
-
-</style><title>练习题目列表</title>
+        .menu-item-container a.menu-style-btn {
+            background-color: #f5f8fa;
+            background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
+        }
+    </style>
+    <title>练习题目列表</title>
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='第一部分'><span>第一部分</span></h1><figure class='table-figure'><table><thead><tr><th><span>题号</span></th><th><span>题目链接</span></th></tr></thead><tbody><tr><td><span>2000</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2000'><span> ASCII码排序</span></a></td></tr><tr><td><span>2001</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2001'><span> 计算两点间的距离</span></a></td></tr><tr><td><span>2002</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2002'><span> 计算球体积</span></a></td></tr><tr><td><span>2003</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2003'><span> 求绝对值</span></a></td></tr><tr><td><span>2004</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2004'><span> 成绩转换</span></a></td></tr><tr><td><span>2005</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2005'><span> 第几天？</span></a></td></tr><tr><td><span>2006</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2006'><span> 求奇数的乘积</span></a></td></tr><tr><td><span>2007</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2007'><span> 平方和与立方和</span></a></td></tr><tr><td><span>2008</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2008'><span> 数值统计</span></a></td></tr><tr><td><span>2009</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2009'><span> 求数列的和</span></a></td></tr><tr><td><span>2010</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2010'><span> 水仙花数</span></a></td></tr><tr><td><span>2011</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2011'><span> 多项式求和</span></a></td></tr><tr><td><span>2012</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2012'><span> 素数判定</span></a></td></tr><tr><td><span>2013</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2013'><span> 蟠桃记</span></a></td></tr><tr><td><span>2014</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2014'><span> 青年歌手大奖赛_评委会打分</span></a></td></tr><tr><td><span>2015</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2015'><span> 偶数求和</span></a></td></tr><tr><td><span>2016</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2016'><span> 数据的交换输出</span></a></td></tr><tr><td><span>2017</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2017'><span> 字符串统计</span></a></td></tr><tr><td><span>2018</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2018'><span> 母牛的故事</span></a></td></tr><tr><td><span>2019</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2019'><span> 数列有序!</span></a></td></tr><tr><td><span>2020</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2020'><span> 绝对值排序</span></a></td></tr><tr><td><span>2021</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2021'><span> 发工资咯：）</span></a></td></tr><tr><td><span>2022</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2022'><span> 海选女主角</span></a></td></tr><tr><td><span>2023</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2023'><span> 求平均成绩</span></a></td></tr><tr><td><span>2024</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2024'><span> C语言合法标识符</span></a></td></tr><tr><td><span>2025</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2025'><span> 查找最大元素</span></a></td></tr><tr><td><span>2026</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2026'><span> 首字母变大写</span></a></td></tr><tr><td><span>2027</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2027'><span> 统计元音</span></a></td></tr><tr><td><span>2028</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2028'><span> Lowest Common Multiple Plus</span></a></td></tr><tr><td><span>2029</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2029'><span> Palindromes _easy version</span></a></td></tr><tr><td><span>2030</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2030'><span> 汉字统计</span></a></td></tr><tr><td><span>2031</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2031'><span> 进制转换</span></a></td></tr><tr><td><span>2032</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2032'><span> 杨辉三角</span></a></td></tr><tr><td><span>2033</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2033'><span> 人见人爱A+B</span></a></td></tr><tr><td><span>2034</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2034'><span> 人见人爱A-B</span></a></td></tr><tr><td><span>2035</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2035'><span> 人见人爱A^B</span></a></td></tr><tr><td><span>2036</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2036'><span> 改革春风吹满地</span></a></td></tr><tr><td><span>2037</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2037'><span> 今年暑假不AC</span></a></td></tr><tr><td><span>2039</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2039'><span> 三角形</span></a></td></tr><tr><td><span>2040</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2040'><span> 亲和数</span></a></td></tr><tr><td><span>2041</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2041'><span> 超级楼梯</span></a></td></tr><tr><td><span>2042</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2042'><span> 不容易系列之二</span></a></td></tr><tr><td><span>2043</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2043'><span> 密码</span></a></td></tr><tr><td><span>2044</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2044'><span> 一只小蜜蜂...</span></a></td></tr><tr><td><span>2045</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2045'><span> 不容易系列之(3)—— LELE的RPG难题</span></a></td></tr><tr><td><span>2046</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2046'><span> 骨牌铺方格</span></a></td></tr><tr><td><span>2047</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2047'><span> 阿牛的EOF牛肉串</span></a></td></tr><tr><td><span>2048</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2048'><span> 神、上帝以及老天爷</span></a></td></tr><tr><td><span>2049</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2049'><span> 不容易系列之(4)——考新郎</span></a></td></tr><tr><td><span>2050</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2050'><span> 折线分割平面</span></a></td></tr><tr><td><span>2051</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2051'><span> Bitset</span></a></td></tr><tr><td><span>2052</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2052'><span> Picture</span></a></td></tr><tr><td><span>2053</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2053'><span> Switch Game</span></a></td></tr><tr><td><span>2054</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2054'><span> A == B ?</span></a></td></tr><tr><td><span>2055</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2055'><span> An easy problem</span></a></td></tr><tr><td><span>2056</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2056'><span> Rectangles</span></a></td></tr><tr><td><span>2057</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2057'><span> A + B Again</span></a></td></tr><tr><td><span>2058</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2058'><span> The sum problem</span></a></td></tr><tr><td><span>2059</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2059'><span> 龟兔赛跑</span></a></td></tr><tr><td><span>2060</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2060'><span> Snooker</span></a></td></tr><tr><td><span>2061</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2061'><span> Treasure the new start, freshmen!</span></a></td></tr><tr><td><span>2062</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2062'><span> Subset sequence</span></a></td></tr><tr><td><span>2063</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2063'><span> 过山车</span></a></td></tr><tr><td><span>2064</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2064'><span> 汉诺塔III</span></a></td></tr><tr><td><span>2065</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2065'><span> &quot;红色病毒&quot;问题</span></a></td></tr><tr><td><span>2066</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2066'><span> 一个人的旅行</span></a></td></tr><tr><td><span>2067</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2067'><span> 小兔的棋盘</span></a></td></tr><tr><td><span>2068</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2068'><span> RPG的错排</span></a></td></tr><tr><td><span>2069</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2069'><span> Coin Change</span></a></td></tr><tr><td><span>2070</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2070'><span> Fibbonacci Number</span></a></td></tr><tr><td><span>2071</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2071'><span> Max Num</span></a></td></tr><tr><td><span>2072</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2072'><span> 单词数</span></a></td></tr><tr><td><span>2073</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2073'><span> 无限的路</span></a></td></tr><tr><td><span>2074</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2074'><span> 叠筐</span></a></td></tr><tr><td><span>2075</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2075'><span> A</span><span>|</span><span>B?</span></a></td></tr><tr><td><span>2076</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2076'><span> 夹角有多大(题目已修改,注意读题)</span></a></td></tr><tr><td><span>2077</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2077'><span> 汉诺塔IV</span></a></td></tr><tr><td><span>2078</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2078'><span> 复习时间</span></a></td></tr><tr><td><span>2079</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2079'><span> 选课时间</span></a></td></tr><tr><td><span>2080</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2080'><span> 夹角有多大II</span></a></td></tr><tr><td><span>2081</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2081'><span> 手机短号</span></a></td></tr><tr><td><span>2082</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2082'><span> 找单词</span></a></td></tr><tr><td><span>2083</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2083'><span> 简易版之最短距离</span></a></td></tr><tr><td><span>2084</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2084'><span> 数塔</span></a></td></tr><tr><td><span>2085</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2085'><span> 核反应堆</span></a></td></tr><tr><td><span>2086</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2086'><span> A1 = ?</span></a></td></tr><tr><td><span>2087</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2087'><span> 剪花布条</span></a></td></tr><tr><td><span>2088</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2088'><span> Box of Bricks</span></a></td></tr><tr><td><span>2089</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2089'><span> 不要62</span></a></td></tr><tr><td><span>2090</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2090'><span> 算菜价</span></a></td></tr><tr><td><span>2091</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2091'><span> 空心三角形</span></a></td></tr><tr><td><span>2092</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2092'><span> 整数解</span></a></td></tr><tr><td><span>2093</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2093'><span> 考试排名</span></a></td></tr><tr><td><span>2094</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2094'><span> 产生冠军</span></a></td></tr><tr><td><span>2095</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2095'><span> find your present (2)</span></a></td></tr><tr><td><span>2096</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2096'><span> 小明A+B</span></a></td></tr><tr><td><span>2097</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2097'><span> Sky数</span></a></td></tr><tr><td><span>2098</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2098'><span> 分拆素数和</span></a></td></tr><tr><td><span>2099</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2099'><span> 整除的尾数</span></a></td></tr></tbody></table></figure><h1 id='第二部分'><span>第二部分</span></h1><figure class='table-figure'><table><thead><tr><th><span>题号</span></th><th><span>题目链接</span></th></tr></thead><tbody><tr><td><span>2100</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2100'><span> Lovekey</span></a></td></tr><tr><td><span>2101</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2101'><span> A + B Problem Too</span></a></td></tr><tr><td><span>2102</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2102'><span> A计划</span></a></td></tr><tr><td><span>2103</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2103'><span> Family planning</span></a></td></tr><tr><td><span>2104</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2104'><span> hide handkerchief</span></a></td></tr><tr><td><span>2105</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2105'><span> The Center of Gravity</span></a></td></tr><tr><td><span>2106</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2106'><span> decimal system</span></a></td></tr><tr><td><span>2107</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2107'><span> Founding of HDU</span></a></td></tr><tr><td><span>2108</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2108'><span> Shape of HDU</span></a></td></tr><tr><td><span>2109</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2109'><span> Fighting for HDU</span></a></td></tr><tr><td><span>2110</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2110'><span> Crisis of HDU</span></a></td></tr><tr><td><span>2111</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2111'><span> Saving HDU</span></a></td></tr><tr><td><span>2112</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2112'><span> HDU Today</span></a></td></tr><tr><td><span>2113</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2113'><span> Secret Number</span></a></td></tr><tr><td><span>2114</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2114'><span> Calculate S(n)</span></a></td></tr><tr><td><span>2115</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2115'><span> I Love This Game</span></a></td></tr><tr><td><span>2116</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2116'><span> Has the sum exceeded</span></a></td></tr><tr><td><span>2117</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2117'><span> Just a Numble</span></a></td></tr><tr><td><span>2118</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2118'><span> Mouse</span></a></td></tr><tr><td><span>2119</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2119'><span> Matrix</span></a></td></tr><tr><td><span>2120</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2120'><span> Ice_cream&#39;s world I</span></a></td></tr><tr><td><span>2121</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2121'><span> Ice_cream’s world II</span></a></td></tr><tr><td><span>2122</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2122'><span> Ice_cream’s world III</span></a></td></tr><tr><td><span>2123</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2123'><span> An easy problem</span></a></td></tr><tr><td><span>2124</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2124'><span> Repair the Wall</span></a></td></tr><tr><td><span>2125</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2125'><span> Local area network</span></a></td></tr><tr><td><span>2126</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2126'><span> Buy the souvenirs</span></a></td></tr><tr><td><span>2127</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2127'><span> Polish notation</span></a></td></tr><tr><td><span>2128</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2128'><span> Tempter of the Bone II</span></a></td></tr><tr><td><span>2129</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2129'><span> Give the rank</span></a></td></tr><tr><td><span>2130</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2130'><span> Count the cuboids</span></a></td></tr><tr><td><span>2131</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2131'><span> Probability</span></a></td></tr><tr><td><span>2132</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2132'><span> An easy problem</span></a></td></tr><tr><td><span>2133</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2133'><span> What day is it</span></a></td></tr><tr><td><span>2134</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2134'><span> Cuts the cake</span></a></td></tr><tr><td><span>2135</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2135'><span> Rolling table</span></a></td></tr><tr><td><span>2136</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2136'><span> Largest prime factor</span></a></td></tr><tr><td><span>2137</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2137'><span> circumgyrate the string</span></a></td></tr><tr><td><span>2138</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2138'><span> How many prime numbers</span></a></td></tr><tr><td><span>2139</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2139'><span> Calculate the formula</span></a></td></tr><tr><td><span>2140</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2140'><span> Michael Scofield&#39;s letter</span></a></td></tr><tr><td><span>2141</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2141'><span> Can you find it?</span></a></td></tr><tr><td><span>2142</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2142'><span> disney</span></a></td></tr><tr><td><span>2143</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2143'><span> box</span></a></td></tr><tr><td><span>2144</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2144'><span> Evolution</span></a></td></tr><tr><td><span>2145</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2145'><span> zz&#39;s Mysterious Present</span></a></td></tr><tr><td><span>2146</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2146'><span> The most binary substring</span></a></td></tr><tr><td><span>2147</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2147'><span> kiki&#39;s game</span></a></td></tr><tr><td><span>2148</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2148'><span> Score</span></a></td></tr><tr><td><span>2149</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2149'><span> Public Sale</span></a></td></tr><tr><td><span>2150</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2150'><span> Pipe</span></a></td></tr><tr><td><span>2151</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2151'><span> Worm</span></a></td></tr><tr><td><span>2152</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2152'><span> Fruit</span></a></td></tr><tr><td><span>2153</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2153'><span> 仙人球的残影</span></a></td></tr><tr><td><span>2154</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2154'><span> 跳舞毯</span></a></td></tr><tr><td><span>2155</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2155'><span> 小黑的镇魂曲</span></a></td></tr><tr><td><span>2156</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2156'><span> 分数矩阵</span></a></td></tr><tr><td><span>2157</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2157'><span> How many ways??</span></a></td></tr><tr><td><span>2158</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2158'><span> 最短区间版大家来找碴</span></a></td></tr><tr><td><span>2159</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2159'><span> FATE</span></a></td></tr><tr><td><span>2160</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2160'><span> 母猪的故事</span></a></td></tr><tr><td><span>2161</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2161'><span> Primes</span></a></td></tr><tr><td><span>2162</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2162'><span> Add ‘em</span></a></td></tr><tr><td><span>2163</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2163'><span> Palindromes</span></a></td></tr><tr><td><span>2164</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2164'><span> Rock, Paper, or Scissors?</span></a></td></tr><tr><td><span>2165</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2165'><span> Missile Command</span></a></td></tr><tr><td><span>2166</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2166'><span> Palindromic Primes Category in Jeopardy!</span></a></td></tr><tr><td><span>2167</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2167'><span> Pebbles</span></a></td></tr><tr><td><span>2168</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2168'><span> Rubik&#39;s Cube</span></a></td></tr><tr><td><span>2169</span></td><td><span>[ Geek Challenge </span><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2169'><span>SKRZAT</span><span>]</span><span> (Base Minus Two)</span></a></td></tr><tr><td><span>2170</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2170'><span> Frogger</span></a></td></tr><tr><td><span>2171</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2171'><span> “Bubble Gum, Bubble Gum, in the dish, how many pieces do you wish?”</span></a></td></tr><tr><td><span>2172</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2172'><span> Games R Us</span></a></td></tr><tr><td><span>2173</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2173'><span> Cover Up</span></a></td></tr><tr><td><span>2174</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2174'><span> Bridged Marble Rings</span></a></td></tr><tr><td><span>2175</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2175'><span> 汉诺塔IX</span></a></td></tr><tr><td><span>2176</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2176'><span> 取(m堆)石子游戏</span></a></td></tr><tr><td><span>2177</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2177'><span> 取(2堆)石子游戏</span></a></td></tr><tr><td><span>2178</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2178'><span> 猜数字</span></a></td></tr><tr><td><span>2179</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2179'><span> pi</span></a></td></tr><tr><td><span>2180</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2180'><span> 时钟</span></a></td></tr><tr><td><span>2181</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2181'><span> 哈密顿绕行世界问题</span></a></td></tr><tr><td><span>2182</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2182'><span> Frog</span></a></td></tr><tr><td><span>2183</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2183'><span> 奇数阶魔方(II)</span></a></td></tr><tr><td><span>2184</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2184'><span> 汉诺塔VIII</span></a></td></tr><tr><td><span>2185</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2185'><span> Chess</span></a></td></tr><tr><td><span>2186</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2186'><span> 悼念512汶川大地震遇难同胞——一定要记住我爱你</span></a></td></tr><tr><td><span>2187</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2187'><span> 悼念512汶川大地震遇难同胞——老人是真饿了</span></a></td></tr><tr><td><span>2188</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2188'><span> 悼念512汶川大地震遇难同胞——选拔志愿者</span></a></td></tr><tr><td><span>2189</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2189'><span> 悼念512汶川大地震遇难同胞——来生一起走</span></a></td></tr><tr><td><span>2190</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2190'><span> 悼念512汶川大地震遇难同胞——重建希望小学</span></a></td></tr><tr><td><span>2191</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2191'><span> 悼念512汶川大地震遇难同胞——珍惜现在，感恩生活</span></a></td></tr><tr><td><span>2192</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2192'><span> MagicBuilding</span></a></td></tr><tr><td><span>2193</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2193'><span> AVL Tree</span></a></td></tr><tr><td><span>2194</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2194'><span> Help the vendor and get some M </span><sup><span>_</span></sup></a></td></tr><tr><td><span>2195</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2195'><span> Monotone SE Min</span></a></td></tr><tr><td><span>2196</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2196'><span> Computer</span></a></td></tr><tr><td><span>2197</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2197'><span> 本原串</span></a></td></tr><tr><td><span>2198</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2198'><span> How many elements you must throw out?</span></a></td></tr><tr><td><span>2199</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2199'><span> Can you solve this equation?</span></a></td></tr></tbody></table></figure><h1 id='第三部分'><span>第三部分</span></h1><figure class='table-figure'><table><thead><tr><th><span>题号</span></th><th><span>题目链接</span></th></tr></thead><tbody><tr><td><span>1000</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1000'><span> A + B Problem</span></a></td></tr><tr><td><span>1001</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1001'><span> Sum Problem</span></a></td></tr><tr><td><span>1002</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1002'><span> A + B Problem II</span></a></td></tr><tr><td><span>1003</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1003'><span> Max Sum</span></a></td></tr><tr><td><span>1004</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1004'><span> Let the Balloon Rise</span></a></td></tr><tr><td><span>1005</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1005'><span> Number Sequence</span></a></td></tr><tr><td><span>1006</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1006'><span> Tick and Tick</span></a></td></tr><tr><td><span>1007</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1007'><span> Quoit Design</span></a></td></tr><tr><td><span>1008</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1008'><span> Elevator</span></a></td></tr><tr><td><span>1009</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1009'><span> FatMouse&#39; Trade</span></a></td></tr><tr><td><span>1010</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1010'><span> Tempter of the Bone</span></a></td></tr><tr><td><span>1011</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1011'><span> Starship Troopers</span></a></td></tr><tr><td><span>1012</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1012'><span> u Calculate e</span></a></td></tr><tr><td><span>1013</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1013'><span> Digital Roots</span></a></td></tr><tr><td><span>1014</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1014'><span> Uniform Generator</span></a></td></tr><tr><td><span>1015</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1015'><span> Safecracker</span></a></td></tr><tr><td><span>1016</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1016'><span> Prime Ring Problem</span></a></td></tr><tr><td><span>1017</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1017'><span> A Mathematical Curiosity</span></a></td></tr><tr><td><span>1018</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1018'><span> Big Number</span></a></td></tr><tr><td><span>1019</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1019'><span> Least Common Multiple</span></a></td></tr><tr><td><span>1020</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1020'><span> Encoding</span></a></td></tr><tr><td><span>1021</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1021'><span> Fibonacci Again</span></a></td></tr><tr><td><span>1022</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1022'><span> Train Problem I</span></a></td></tr><tr><td><span>1023</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1023'><span> Train Problem II</span></a></td></tr><tr><td><span>1024</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1024'><span> Max Sum Plus Plus</span></a></td></tr><tr><td><span>1025</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1025'><span> Constructing Roads In JGShining&#39;s Kingdom</span></a></td></tr><tr><td><span>1026</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1026'><span> Ignatius and the Princess I</span></a></td></tr><tr><td><span>1027</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1027'><span> Ignatius and the Princess II</span></a></td></tr><tr><td><span>1028</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1028'><span> Ignatius and the Princess III</span></a></td></tr><tr><td><span>1029</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1029'><span> Ignatius and the Princess IV</span></a></td></tr><tr><td><span>1030</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1030'><span> Delta-wave</span></a></td></tr><tr><td><span>1031</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1031'><span> Design T-Shirt</span></a></td></tr><tr><td><span>1032</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1032'><span> The 3n + 1 problem</span></a></td></tr><tr><td><span>1033</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1033'><span> Edge</span></a></td></tr><tr><td><span>1034</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1034'><span> Candy Sharing Game</span></a></td></tr><tr><td><span>1035</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1035'><span> Robot Motion</span></a></td></tr><tr><td><span>1036</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1036'><span> Average is not Fast Enough!</span></a></td></tr><tr><td><span>1037</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1037'><span> Keep on Truckin&#39;</span></a></td></tr><tr><td><span>1038</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1038'><span> Biker&#39;s Trip Odometer</span></a></td></tr><tr><td><span>1039</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1039'><span> Easier Done Than Said?</span></a></td></tr><tr><td><span>1040</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1040'><span> As Easy As A+B</span></a></td></tr><tr><td><span>1041</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1041'><span> Computer Transformation</span></a></td></tr><tr><td><span>1042</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1042'><span> N!</span></a></td></tr><tr><td><span>1043</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1043'><span> Eight</span></a></td></tr><tr><td><span>1044</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1044'><span> Collect More Jewels</span></a></td></tr><tr><td><span>1045</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1045'><span> Fire Net</span></a></td></tr><tr><td><span>1046</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1046'><span> Gridland</span></a></td></tr><tr><td><span>1047</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1047'><span> Integer Inquiry</span></a></td></tr><tr><td><span>1048</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1048'><span> The Hardest Problem Ever</span></a></td></tr><tr><td><span>1049</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1049'><span> Climbing Worm</span></a></td></tr><tr><td><span>1050</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1050'><span> Moving Tables</span></a></td></tr><tr><td><span>1051</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1051'><span> Wooden Sticks</span></a></td></tr><tr><td><span>1052</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1052'><span> Tian Ji -- The Horse Racing</span></a></td></tr><tr><td><span>1053</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1053'><span> Entropy</span></a></td></tr><tr><td><span>1054</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1054'><span> Strategic Game</span></a></td></tr><tr><td><span>1055</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1055'><span> Color a Tree</span></a></td></tr><tr><td><span>1056</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1056'><span> HangOver</span></a></td></tr><tr><td><span>1057</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1057'><span> A New Growth Industry</span></a></td></tr><tr><td><span>1058</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1058'><span> Humble Numbers</span></a></td></tr><tr><td><span>1059</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1059'><span> Dividing</span></a></td></tr><tr><td><span>1060</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1060'><span> Leftmost Digit</span></a></td></tr><tr><td><span>1061</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1061'><span> Rightmost Digit</span></a></td></tr><tr><td><span>1062</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1062'><span> Text Reverse</span></a></td></tr><tr><td><span>1063</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1063'><span> Exponentiation</span></a></td></tr><tr><td><span>1064</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1064'><span> Financial Management</span></a></td></tr><tr><td><span>1065</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1065'><span> I Think I Need a Houseboat</span></a></td></tr><tr><td><span>1066</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1066'><span> Last non-zero Digit in N!</span></a></td></tr><tr><td><span>1067</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1067'><span> Gap</span></a></td></tr><tr><td><span>1068</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1068'><span> Girls and Boys</span></a></td></tr><tr><td><span>1069</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1069'><span> Monkey and Banana</span></a></td></tr><tr><td><span>1070</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1070'><span> Milk</span></a></td></tr><tr><td><span>1071</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1071'><span> The area</span></a></td></tr><tr><td><span>1072</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1072'><span> Nightmare</span></a></td></tr><tr><td><span>1073</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1073'><span> Online Judge</span></a></td></tr><tr><td><span>1074</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1074'><span> Doing Homework</span></a></td></tr><tr><td><span>1075</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1075'><span> What Are You Talking About</span></a></td></tr><tr><td><span>1076</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1076'><span> An Easy Task</span></a></td></tr><tr><td><span>1077</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1077'><span> Catching Fish</span></a></td></tr><tr><td><span>1078</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1078'><span> FatMouse and Cheese</span></a></td></tr><tr><td><span>1079</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1079'><span> Calendar Game</span></a></td></tr><tr><td><span>1080</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1080'><span> Human Gene Functions</span></a></td></tr><tr><td><span>1081</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1081'><span> To The Max</span></a></td></tr><tr><td><span>1082</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1082'><span> Matrix Chain Multiplication</span></a></td></tr><tr><td><span>1083</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1083'><span> Courses</span></a></td></tr><tr><td><span>1084</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1084'><span> What Is Your Grade?</span></a></td></tr><tr><td><span>1085</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1085'><span> Holding Bin-Laden Captive!</span></a></td></tr><tr><td><span>1086</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1086'><span> You can Solve a Geometry Problem too</span></a></td></tr><tr><td><span>1087</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1087'><span> Super Jumping! Jumping! Jumping!</span></a></td></tr><tr><td><span>1088</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1088'><span> Write a simple HTML Browser</span></a></td></tr><tr><td><span>1089</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1089'><span> A+B for Input-Output Practice (I)</span></a></td></tr><tr><td><span>1090</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1090'><span> A+B for Input-Output Practice (II)</span></a></td></tr><tr><td><span>1091</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1091'><span> A+B for Input-Output Practice (III)</span></a></td></tr><tr><td><span>1092</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1092'><span> A+B for Input-Output Practice (IV)</span></a></td></tr><tr><td><span>1093</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1093'><span> A+B for Input-Output Practice (V)</span></a></td></tr><tr><td><span>1094</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1094'><span> A+B for Input-Output Practice (VI)</span></a></td></tr><tr><td><span>1095</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1095'><span> A+B for Input-Output Practice (VII)</span></a></td></tr><tr><td><span>1096</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1096'><span> A+B for Input-Output Practice (VIII)</span></a></td></tr><tr><td><span>1097</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1097'><span> A hard puzzle</span></a></td></tr><tr><td><span>1098</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1098'><span> Ignatius&#39;s puzzle</span></a></td></tr><tr><td><span>1099</span></td><td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1099'><span> Lottery</span></a></td></tr></tbody></table></figure></div></div>
+
+<body class='typora-export os-windows'>
+    <div class='typora-export-content'>
+        <div id='write' class=''>
+            <h1 id='第一部分'><span>第一部分</span></h1>
+            <figure class='table-figure'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span>题号</span></th>
+                            <th><span>题目链接</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>2000</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2000'><span> ASCII码排序</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2001</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2001'><span> 计算两点间的距离</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2002</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2002'><span> 计算球体积</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2003</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2003'><span> 求绝对值</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2004</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2004'><span> 成绩转换</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2005</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2005'><span> 第几天？</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2006</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2006'><span> 求奇数的乘积</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2007</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2007'><span> 平方和与立方和</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2008</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2008'><span> 数值统计</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2009</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2009'><span> 求数列的和</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2010</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2010'><span> 水仙花数</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2011</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2011'><span> 多项式求和</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2012</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2012'><span> 素数判定</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2013</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2013'><span> 蟠桃记</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2014</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2014'><span>
+                                        青年歌手大奖赛_评委会打分</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2015</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2015'><span> 偶数求和</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2016</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2016'><span> 数据的交换输出</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2017</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2017'><span> 字符串统计</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2018</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2018'><span> 母牛的故事</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2019</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2019'><span> 数列有序!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2020</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2020'><span> 绝对值排序</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2021</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2021'><span> 发工资咯：）</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2022</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2022'><span> 海选女主角</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2023</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2023'><span> 求平均成绩</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2024</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2024'><span> C语言合法标识符</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2025</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2025'><span> 查找最大元素</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2026</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2026'><span> 首字母变大写</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2027</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2027'><span> 统计元音</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2028</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2028'><span> Lowest Common Multiple
+                                        Plus</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2029</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2029'><span> Palindromes _easy
+                                        version</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2030</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2030'><span> 汉字统计</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2031</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2031'><span> 进制转换</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2032</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2032'><span> 杨辉三角</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2033</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2033'><span> 人见人爱A+B</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2034</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2034'><span> 人见人爱A-B</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2035</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2035'><span> 人见人爱A^B</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2036</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2036'><span> 改革春风吹满地</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2037</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2037'><span> 今年暑假不AC</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2039</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2039'><span> 三角形</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2040</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2040'><span> 亲和数</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2041</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2041'><span> 超级楼梯</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2042</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2042'><span> 不容易系列之二</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2043</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2043'><span> 密码</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2044</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2044'><span> 一只小蜜蜂...</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2045</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2045'><span> 不容易系列之(3)——
+                                        LELE的RPG难题</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2046</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2046'><span> 骨牌铺方格</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2047</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2047'><span> 阿牛的EOF牛肉串</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2048</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2048'><span> 神、上帝以及老天爷</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2049</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2049'><span>
+                                        不容易系列之(4)——考新郎</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2050</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2050'><span> 折线分割平面</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2051</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2051'><span> Bitset</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2052</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2052'><span> Picture</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2053</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2053'><span> Switch Game</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2054</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2054'><span> A == B ?</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2055</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2055'><span> An easy
+                                        problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2056</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2056'><span> Rectangles</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2057</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2057'><span> A + B Again</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2058</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2058'><span> The sum
+                                        problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2059</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2059'><span> 龟兔赛跑</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2060</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2060'><span> Snooker</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2061</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2061'><span> Treasure the new start,
+                                        freshmen!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2062</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2062'><span> Subset
+                                        sequence</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2063</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2063'><span> 过山车</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2064</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2064'><span> 汉诺塔III</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2065</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2065'><span>
+                                        &quot;红色病毒&quot;问题</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2066</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2066'><span> 一个人的旅行</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2067</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2067'><span> 小兔的棋盘</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2068</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2068'><span> RPG的错排</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2069</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2069'><span> Coin Change</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2070</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2070'><span> Fibbonacci
+                                        Number</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2071</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2071'><span> Max Num</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2072</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2072'><span> 单词数</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2073</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2073'><span> 无限的路</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2074</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2074'><span> 叠筐</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2075</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2075'><span>
+                                        A</span><span>|</span><span>B?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2076</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2076'><span>
+                                        夹角有多大(题目已修改,注意读题)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2077</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2077'><span> 汉诺塔IV</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2078</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2078'><span> 复习时间</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2079</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2079'><span> 选课时间</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2080</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2080'><span> 夹角有多大II</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2081</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2081'><span> 手机短号</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2082</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2082'><span> 找单词</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2083</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2083'><span> 简易版之最短距离</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2084</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2084'><span> 数塔</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2085</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2085'><span> 核反应堆</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2086</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2086'><span> A1 = ?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2087</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2087'><span> 剪花布条</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2088</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2088'><span> Box of
+                                        Bricks</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2089</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2089'><span> 不要62</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2090</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2090'><span> 算菜价</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2091</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2091'><span> 空心三角形</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2092</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2092'><span> 整数解</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2093</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2093'><span> 考试排名</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2094</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2094'><span> 产生冠军</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2095</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2095'><span> find your present
+                                        (2)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2096</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2096'><span> 小明A+B</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2097</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2097'><span> Sky数</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2098</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2098'><span> 分拆素数和</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2099</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2099'><span> 整除的尾数</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <h1 id='第二部分'><span>第二部分</span></h1>
+            <figure class='table-figure'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span>题号</span></th>
+                            <th><span>题目链接</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>2100</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2100'><span> Lovekey</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2101</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2101'><span> A + B Problem
+                                        Too</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2102</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2102'><span> A计划</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2103</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2103'><span> Family
+                                        planning</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2104</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2104'><span> hide
+                                        handkerchief</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2105</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2105'><span> The Center of
+                                        Gravity</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2106</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2106'><span> decimal
+                                        system</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2107</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2107'><span> Founding of
+                                        HDU</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2108</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2108'><span> Shape of HDU</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2109</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2109'><span> Fighting for
+                                        HDU</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2110</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2110'><span> Crisis of
+                                        HDU</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2111</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2111'><span> Saving HDU</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2112</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2112'><span> HDU Today</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2113</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2113'><span> Secret
+                                        Number</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2114</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2114'><span> Calculate
+                                        S(n)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2115</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2115'><span> I Love This
+                                        Game</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2116</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2116'><span> Has the sum
+                                        exceeded</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2117</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2117'><span> Just a
+                                        Numble</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2118</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2118'><span> Mouse</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2119</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2119'><span> Matrix</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2120</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2120'><span> Ice_cream&#39;s world
+                                        I</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2121</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2121'><span> Ice_cream’s world
+                                        II</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2122</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2122'><span> Ice_cream’s world
+                                        III</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2123</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2123'><span> An easy
+                                        problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2124</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2124'><span> Repair the
+                                        Wall</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2125</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2125'><span> Local area
+                                        network</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2126</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2126'><span> Buy the
+                                        souvenirs</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2127</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2127'><span> Polish
+                                        notation</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2128</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2128'><span> Tempter of the Bone
+                                        II</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2129</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2129'><span> Give the
+                                        rank</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2130</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2130'><span> Count the
+                                        cuboids</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2131</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2131'><span> Probability</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2132</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2132'><span> An easy
+                                        problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2133</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2133'><span> What day is
+                                        it</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2134</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2134'><span> Cuts the
+                                        cake</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2135</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2135'><span> Rolling
+                                        table</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2136</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2136'><span> Largest prime
+                                        factor</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2137</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2137'><span> circumgyrate the
+                                        string</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2138</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2138'><span> How many prime
+                                        numbers</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2139</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2139'><span> Calculate the
+                                        formula</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2140</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2140'><span> Michael Scofield&#39;s
+                                        letter</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2141</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2141'><span> Can you find
+                                        it?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2142</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2142'><span> disney</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2143</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2143'><span> box</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2144</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2144'><span> Evolution</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2145</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2145'><span> zz&#39;s Mysterious
+                                        Present</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2146</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2146'><span> The most binary
+                                        substring</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2147</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2147'><span> kiki&#39;s
+                                        game</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2148</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2148'><span> Score</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2149</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2149'><span> Public Sale</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2150</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2150'><span> Pipe</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2151</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2151'><span> Worm</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2152</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2152'><span> Fruit</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2153</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2153'><span> 仙人球的残影</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2154</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2154'><span> 跳舞毯</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2155</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2155'><span> 小黑的镇魂曲</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2156</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2156'><span> 分数矩阵</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2157</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2157'><span> How many
+                                        ways??</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2158</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2158'><span> 最短区间版大家来找碴</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2159</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2159'><span> FATE</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2160</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2160'><span> 母猪的故事</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2161</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2161'><span> Primes</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2162</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2162'><span> Add ‘em</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2163</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2163'><span> Palindromes</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2164</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2164'><span> Rock, Paper, or
+                                        Scissors?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2165</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2165'><span> Missile
+                                        Command</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2166</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2166'><span> Palindromic Primes
+                                        Category in Jeopardy!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2167</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2167'><span> Pebbles</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2168</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2168'><span> Rubik&#39;s
+                                        Cube</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2169</span></td>
+                            <td><span>[ Geek Challenge </span><a
+                                    href='https://acm.hdu.edu.cn/showproblem.php?pid=2169'><span>SKRZAT</span><span>]</span><span>
+                                        (Base Minus Two)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2170</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2170'><span> Frogger</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2171</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2171'><span> “Bubble Gum, Bubble
+                                        Gum, in the dish, how many pieces do you wish?”</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2172</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2172'><span> Games R Us</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2173</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2173'><span> Cover Up</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2174</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2174'><span> Bridged Marble
+                                        Rings</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2175</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2175'><span> 汉诺塔IX</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2176</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2176'><span> 取(m堆)石子游戏</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2177</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2177'><span> 取(2堆)石子游戏</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2178</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2178'><span> 猜数字</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2179</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2179'><span> pi</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2180</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2180'><span> 时钟</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2181</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2181'><span> 哈密顿绕行世界问题</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2182</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2182'><span> Frog</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2183</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2183'><span> 奇数阶魔方(II)</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2184</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2184'><span> 汉诺塔VIII</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2185</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2185'><span> Chess</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2186</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2186'><span>
+                                        悼念512汶川大地震遇难同胞——一定要记住我爱你</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2187</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2187'><span>
+                                        悼念512汶川大地震遇难同胞——老人是真饿了</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2188</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2188'><span>
+                                        悼念512汶川大地震遇难同胞——选拔志愿者</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2189</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2189'><span>
+                                        悼念512汶川大地震遇难同胞——来生一起走</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2190</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2190'><span>
+                                        悼念512汶川大地震遇难同胞——重建希望小学</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2191</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2191'><span>
+                                        悼念512汶川大地震遇难同胞——珍惜现在，感恩生活</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2192</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2192'><span>
+                                        MagicBuilding</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2193</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2193'><span> AVL Tree</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2194</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2194'><span> Help the vendor and get
+                                        some M </span><sup><span>_</span></sup></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2195</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2195'><span> Monotone SE
+                                        Min</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2196</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2196'><span> Computer</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>2197</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2197'><span> 本原串</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2198</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2198'><span> How many elements you
+                                        must throw out?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>2199</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=2199'><span> Can you solve this
+                                        equation?</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <h1 id='第三部分'><span>第三部分</span></h1>
+            <figure class='table-figure'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span>题号</span></th>
+                            <th><span>题目链接</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>1000</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1000'><span> A + B
+                                        Problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1001</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1001'><span> Sum Problem</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1002</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1002'><span> A + B Problem
+                                        II</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1003</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1003'><span> Max Sum</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1004</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1004'><span> Let the Balloon
+                                        Rise</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1005</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1005'><span> Number
+                                        Sequence</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1006</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1006'><span> Tick and
+                                        Tick</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1007</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1007'><span> Quoit Design</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1008</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1008'><span> Elevator</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1009</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1009'><span> FatMouse&#39;
+                                        Trade</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1010</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1010'><span> Tempter of the
+                                        Bone</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1011</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1011'><span> Starship
+                                        Troopers</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1012</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1012'><span> u Calculate
+                                        e</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1013</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1013'><span> Digital
+                                        Roots</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1014</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1014'><span> Uniform
+                                        Generator</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1015</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1015'><span> Safecracker</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1016</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1016'><span> Prime Ring
+                                        Problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1017</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1017'><span> A Mathematical
+                                        Curiosity</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1018</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1018'><span> Big Number</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1019</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1019'><span> Least Common
+                                        Multiple</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1020</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1020'><span> Encoding</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1021</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1021'><span> Fibonacci
+                                        Again</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1022</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1022'><span> Train Problem
+                                        I</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1023</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1023'><span> Train Problem
+                                        II</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1024</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1024'><span> Max Sum Plus
+                                        Plus</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1025</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1025'><span> Constructing Roads In
+                                        JGShining&#39;s Kingdom</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1026</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1026'><span> Ignatius and the
+                                        Princess I</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1027</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1027'><span> Ignatius and the
+                                        Princess II</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1028</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1028'><span> Ignatius and the
+                                        Princess III</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1029</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1029'><span> Ignatius and the
+                                        Princess IV</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1030</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1030'><span> Delta-wave</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1031</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1031'><span> Design
+                                        T-Shirt</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1032</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1032'><span> The 3n + 1
+                                        problem</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1033</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1033'><span> Edge</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1034</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1034'><span> Candy Sharing
+                                        Game</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1035</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1035'><span> Robot Motion</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1036</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1036'><span> Average is not Fast
+                                        Enough!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1037</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1037'><span> Keep on
+                                        Truckin&#39;</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1038</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1038'><span> Biker&#39;s Trip
+                                        Odometer</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1039</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1039'><span> Easier Done Than
+                                        Said?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1040</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1040'><span> As Easy As
+                                        A+B</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1041</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1041'><span> Computer
+                                        Transformation</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1042</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1042'><span> N!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1043</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1043'><span> Eight</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1044</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1044'><span> Collect More
+                                        Jewels</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1045</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1045'><span> Fire Net</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1046</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1046'><span> Gridland</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1047</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1047'><span> Integer
+                                        Inquiry</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1048</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1048'><span> The Hardest Problem
+                                        Ever</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1049</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1049'><span> Climbing
+                                        Worm</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1050</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1050'><span> Moving
+                                        Tables</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1051</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1051'><span> Wooden
+                                        Sticks</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1052</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1052'><span> Tian Ji -- The Horse
+                                        Racing</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1053</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1053'><span> Entropy</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1054</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1054'><span> Strategic
+                                        Game</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1055</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1055'><span> Color a Tree</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1056</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1056'><span> HangOver</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1057</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1057'><span> A New Growth
+                                        Industry</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1058</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1058'><span> Humble
+                                        Numbers</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1059</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1059'><span> Dividing</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1060</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1060'><span> Leftmost
+                                        Digit</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1061</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1061'><span> Rightmost
+                                        Digit</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1062</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1062'><span> Text Reverse</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1063</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1063'><span>
+                                        Exponentiation</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1064</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1064'><span> Financial
+                                        Management</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1065</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1065'><span> I Think I Need a
+                                        Houseboat</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1066</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1066'><span> Last non-zero Digit in
+                                        N!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1067</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1067'><span> Gap</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1068</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1068'><span> Girls and
+                                        Boys</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1069</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1069'><span> Monkey and
+                                        Banana</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1070</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1070'><span> Milk</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1071</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1071'><span> The area</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1072</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1072'><span> Nightmare</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1073</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1073'><span> Online Judge</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1074</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1074'><span> Doing
+                                        Homework</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1075</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1075'><span> What Are You Talking
+                                        About</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1076</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1076'><span> An Easy Task</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1077</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1077'><span> Catching
+                                        Fish</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1078</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1078'><span> FatMouse and
+                                        Cheese</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1079</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1079'><span> Calendar
+                                        Game</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1080</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1080'><span> Human Gene
+                                        Functions</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1081</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1081'><span> To The Max</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>1082</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1082'><span> Matrix Chain
+                                        Multiplication</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1083</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1083'><span> Courses</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1084</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1084'><span> What Is Your
+                                        Grade?</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1085</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1085'><span> Holding Bin-Laden
+                                        Captive!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1086</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1086'><span> You can Solve a
+                                        Geometry Problem too</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1087</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1087'><span> Super Jumping! Jumping!
+                                        Jumping!</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1088</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1088'><span> Write a simple HTML
+                                        Browser</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1089</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1089'><span> A+B for Input-Output
+                                        Practice (I)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1090</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1090'><span> A+B for Input-Output
+                                        Practice (II)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1091</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1091'><span> A+B for Input-Output
+                                        Practice (III)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1092</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1092'><span> A+B for Input-Output
+                                        Practice (IV)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1093</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1093'><span> A+B for Input-Output
+                                        Practice (V)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1094</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1094'><span> A+B for Input-Output
+                                        Practice (VI)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1095</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1095'><span> A+B for Input-Output
+                                        Practice (VII)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1096</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1096'><span> A+B for Input-Output
+                                        Practice (VIII)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1097</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1097'><span> A hard
+                                        puzzle</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1098</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1098'><span> Ignatius&#39;s
+                                        puzzle</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><span>1099</span></td>
+                            <td><a href='https://acm.hdu.edu.cn/showproblem.php?pid=1099'><span> Lottery</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+        </div>
+    </div>
 </body>
+
 </html>
